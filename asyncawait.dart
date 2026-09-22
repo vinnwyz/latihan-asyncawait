@@ -149,4 +149,20 @@ void main(){
   // print nama saya a, umur b, berat c
   // fungsi, list map, perubahan tipe data
 
+    stdout.write('Masukan Nama : ');
+  	var input1 = stdin.readLineSync()!;
+    stdout.write('Masukan Umur :');
+    var input2 = stdin.readLineSync()!;
+    stdout.write('Masukan Berat :');
+    var input3 = stdin.readLineSync()!;
+
+    void data (
+      String Nama,
+      int umur,
+      num berat,
+      ) { 
+        List datamhs = [];
+
+    }
+
  }
