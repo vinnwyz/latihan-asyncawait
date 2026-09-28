@@ -149,20 +149,51 @@ void main(){
   // print nama saya a, umur b, berat c
   // fungsi, list map, perubahan tipe data
 
-    stdout.write('Masukan Nama : ');
-  	var input1 = stdin.readLineSync()!;
-    stdout.write('Masukan Umur :');
-    var input2 = stdin.readLineSync()!;
-    stdout.write('Masukan Berat :');
-    var input3 = stdin.readLineSync()!;
+    // stdout.write('Masukan Nama : ');
+  	// var input1 = stdin.readLineSync()!;
+    // stdout.write('Masukan Umur :');
+    // var input2 = stdin.readLineSync()!;
+    // stdout.write('Masukan Berat :');
+    // var input3 = stdin.readLineSync()!;
 
-    void data (
-      String Nama,
-      int umur,
-      num berat,
-      ) { 
-        List datamhs = [];
+    // void data (
+    //   String Nama,
+    //   int umur,
+    //   num berat,
+    //   ) { 
+    //     List datamhs = [];
 
-    }
+    // }
+
+
+// Fungsi menerima 3 input dan mengembalikan List<Map>
+List<Map<String, dynamic>> buatData(String nama, int umur, double berat) {
+  List<Map<String, dynamic>> list = [];
+
+  // Proses: 3 input dijadikan map baru, lalu dimasukkan ke list dengan add()
+  Map<String, dynamic> data = {
+    'nama': nama,
+    'umur': umur,
+    'berat': berat,
+  };
+  list.add(data);
+
+  return list;
+}
+  // Input dari user (3 jenis data)
+  stdout.write('Masukkan nama : ');
+  String nama = stdin.readLineSync()!;
+  stdout.write('Masukkan umur : ');
+  int umur = int.parse(stdin.readLineSync()!);
+  stdout.write('Masukkan berat : ');
+  double berat = double.parse(stdin.readLineSync()!);
+
+  // Panggil fungsi
+  List<Map<String, dynamic>> hasil = buatData(nama, umur, berat);
+
+  // Print hasil
+  for (var item in hasil) {
+    print('Nama saya ${item['nama']}, umur ${item['umur']}, berat ${item['berat']}');
+  }
 
  }
